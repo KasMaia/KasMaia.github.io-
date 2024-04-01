@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Maia</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class = 'container'> 
+        <div class = 'menu-container'>
+                <nav class = horizontal-menu>   <!--Para criação de um menu horizontal usando listas desordenadas e flexbox-->
+                    <ul class = 'menu-options'>
+                        <li><a href="#namediv">Principal </a></li>
+                        <li><a href='#sobre-mim'>Sobre mim</a></li>
+                        <li><a href="#experience-title">Experiência</a></li>
+                        <li><a href="#entre-em-contato"><span>Contato</span></a></li>                                                                        
+                    </ul>                 
+                </nav>
+        </div>
+        <div class = 'namediv' id="namediv">    
+                    <h1>Olá, <br> sou <span>Lucas Maia</span></h1>  
+                    <p>Estou aprendendo a desenvolver para a web</p>  
+        </div> 
+        <h1 id = 'sobre-mim'>Sobre mim</h1>
+        <div class = about-me-container>    <!--Um container para alinhar os items da caixa usando flexbox em CSS-->
+                <div class = 'about-me-div'>
+                    <div class = about-me-1>
+                        <span>A jornada até agora:</span>
+                        <p>Meu nome é Lucas Maia. Sou graduando em em Análise e desenvolvimento de sistemas. Me interessei por programação principalmente por causa da forma como teoria e prática estão tão próximas uma da outra, pela fácil acessibilidade e facilidade em testar as teorias aprendidas.</p>
+                    </div>
+                    <div class = dividing-line>
+                    </div>
+                    <div class = about-me-2>
+                        <span>Um pouco mais sobre mim:</span> 
+                        <p>Gosto de jogar videogames e unir o útil ao agradável me arriscando na cozinha nas horas vagas. Me interesso também por colecionar plantas e manter o meu jardim.</p>
+                    </div>
+                </div>
+        </div>
+        <div>
+            <h1 id = 'experience-title'>Experiência</h1>
+        </div>
+        <div class = 'wrapper'>
+            <div class = 'experience-container'> <!--Container para o alinhamento de items com flexbox-->
+                    <div class = 'languages-div'>
+                        <span class="ant-design--code-outlined"></span class="language-container"> <!-- para os ícones na parte de 'experiência' usei o iconify -->
+                        <p><span>Linguagens de programação:</span> familiaridade com HTML e CSS, além de Python e noções de JavaScript.
+                        </p>
+                    </div>
+                    <div class = 'tools-div' >
+                        <span class="iconoir--tools"></span>
+                        <p><span>Ferramentas:</span> <br>
+                        Familiaridade com IDEs como VSCode e Pycharm. Criação de protótipos interativos com Figma. 
+                        </p>
+                    </div>
+                    <div class = 'idioms-div'>
+                            <span class="ion--language-outline"></span>
+                            <p><span>Idiomas: </span><br> Fluência em português e inglês, além de espanhol intermediário.</p>
+                    </div>
+            </div>
+        </div>
+        <h1 id = 'entre-em-contato'>Entre em contato</h1>    
+        <div class = contact-container>
+            <form action="#" class="form-container"> <!--Formulário para que as informações dos inputs sejam enviadas para o link em 'action, que no momento não existe'-->
+                <label for="nome">Nome:</label>
+                    <input type="text" id ='nome' required>
+                <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id = 'sobrenome' required >
+                <label for="email">Email:</label>
+                    <input type="text" id = 'email' required>
+                <label for="mensagem">Mensagem:</label>
+                    <input type="text" id = mensagem  required>
+                <button class = 'submit-button'>Enviar</button>    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

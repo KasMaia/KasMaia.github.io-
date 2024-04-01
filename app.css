@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  /* Fonte importada */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.menu-container {   /* Para poder fixar o menu horizontal */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgb(38, 37, 37);
+    height: 60px;
+    
+}
+
+
+.horizontal-menu {  /* O menu horizontal em si */
+    display: flex;
+    justify-content: right;
+    gap: 10rem;
+    margin-bottom: 9rem;
+}
+
+.horizontal-menu li {
+    display: inline-block;  
+    margin-right: 70px;
+}
+
+.menu-options a {   /* As opções do menu horizontal */
+    color: white;
+    font-size: 115%;
+    text-decoration: none;
+}
+
+.menu-options a:hover {  /* Efeitos quando o usuário passar com o mouse por cima das opções */
+    color: rgb(105, 12, 226);
+}
+
+.menu-options span {
+    background-color: rgb(105, 12, 226);
+    border-radius: 20px;
+    padding: 9px;
+}
+
+.menu-options span:hover {
+    color: white;
+    background-color: rgb(77, 9, 167);
+}
+
+@media (max-width: 710px) { /*para adequar o menu para telas menores */
+    .menu-container {   
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: rgb(38, 37, 37);
+        height: 140px;
+        
+    }
+    
+    .horizontal-menu {  
+        justify-content: right;
+        gap: 4rem;
+        margin-bottom: 9rem;
+    }
+    
+    .horizontal-menu li {
+        display: flex;
+        flex-direction: column;
+        margin-right: 70px;
+    }
+    .menu-options span {
+        background-color: rgb(105, 12, 226);
+        border-radius: 20px;
+        padding: 4px;
+    }
+}
+
+.namediv {
+    text-align: center;
+    background: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    padding: 0;
+    height: 800px;
+    padding-top: 170px;
+}
+
+.namediv h1 {
+    font-size: 650%;
+    margin: 0;
+    opacity: 0;
+    animation:  fadeIn 7s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {  /* Animação da primeira parte, que aparece lentamente */
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.namediv span {
+    color: rgb(105, 12, 226);
+}
+
+.namediv p {            /* juntar esse com o de baixo dps */
+    font-size: 190%;
+    margin: 0;
+}
+
+.namediv p {
+    font-size: 190%;
+    margin-bottom: 0;
+    opacity: 0;
+    animation:  fadeIn 7s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {  /* Animação da segunda parte (o texto menor), que aparece após o texto maior */
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+#sobre-mim {
+    text-align: center;
+}
+
+.about-me-container {     /*para centralizar a caixa com o texto */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 13%;
+} 
+
+.about-me-container span {font-weight: bold;
+color: black;}
+
+.about-me-div {
+    display: flex;
+    width: 75%;
+    background-color: rgb(105, 12, 226) ;
+    justify-content: center;
+    gap: 9%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    
+}
+
+.about-me-1 {
+    width: 30%;
+}
+
+.dividing-line {
+    background-color: white;
+    width: 0.2%;
+    height: 100%
+}
+
+.about-me-2 {
+    width: 30%;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%; 
+}
+
+@media (max-width: 505px) {     /*adaptação para telas menores com o uso de media queries */
+    .about-me-div {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        background-color: rgb(105, 12, 226) ;
+        justify-content: center;
+        text-align: center;
+        gap: 9%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 20px; 
+    }
+    .dividing-line {
+        width: 0;
+        height: 0;
+        background-color: white;
+    }
+    
+    .about-me-1 {
+        width: 100%;
+    }
+
+    .about-me-2 {
+        width: 100%;
+    }
+
+
+}
+
+#experience-title {
+    text-align: center;
+}
+
+.experience-container { background-color:rgb(105, 12, 226) ;
+display: flex;
+justify-content: space-around;
+margin-bottom: 10%;
+border-radius: 20px;
+width: 75%;
+padding-bottom: 50px;
+padding-top: 50px;
+}  
+
+
+.ant-design--code-outlined {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cpath fill='%23000' d='M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+  .iconoir--tools {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='m10.05 10.607l-7.07 7.07a2 2 0 0 0 0 2.83v0a2 2 0 0 0 2.828 0l7.07-7.072m4.315.365l3.878 3.878a2 2 0 0 1 0 2.828v0a2 2 0 0 1-2.828 0l-6.209-6.208M6.733 5.904L4.61 6.61L2.49 3.075l1.414-1.414L7.44 3.782zm0 0l2.83 2.83'/%3E%3Cpath d='M10.05 10.607c-.844-2.153-.679-4.978 1.061-6.718c1.74-1.74 4.95-2.121 6.717-1.06l-3.04 3.04l-.283 3.111l3.111-.282l3.04-3.041c1.062 1.768.68 4.978-1.06 6.717c-1.74 1.74-4.564 1.905-6.717 1.061'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+  .ion--language-outline {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M48 112h288M192 64v48m80 336l96-224l96 224m-162.5-64h133M281.3 112S257 206 199 277S80 384 80 384'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M256 336s-35-27-72-75s-56-85-56-85'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+
+.experience-container p {
+    margin-top: 10px;
+    width: 17rem;
+    height: 100px;
+    font-size: px;
+}
+
+.experience-container span {
+    color: black;
+    font-weight: bold;
+}
+
+.languages-div {        /*para alinhar texto com imagem */
+text-align: center;
+display: block;
+margin: 0 auto;
+}
+
+.tools-div {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    }
+    
+ .idioms-div {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    }
+
+.contact-container { 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+    
+}
+
+@media (max-width: 1080px) {
+    .experience-container {flex-direction: column;} /*otimização para caber em telas menores. Virará uma coluna vertical */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(105, 12, 226);
+    padding: 50px;
+    width: 25%;
+    height: 500px;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.form-container input {
+   height: 30px;
+}
+
+label {font-weight: bold;
+color: black;}
+
+#mensagem {
+    height: 100px ; /*para que o caixa de mensagem fique maior que as outras, como é custumário */
+}
+
+button {
+    width: 30%;
+    height: 50px;
+    margin-top: auto; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-size: 15px; 
+}
+
+#entre-em-contato {
+    text-align: center;
+}
+
+@media (max-width: 710px) {
+    .submit-button {
+        width: 50%;
+        font-size: 10px;
+    }
+}
